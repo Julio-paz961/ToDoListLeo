@@ -1,0 +1,12 @@
+.header {
+    background-image: url(./images/mountain2.jpg);
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media only screen and (max-width: 64em) {
+    .header {
+        height: 100vh;
+    }
+}
