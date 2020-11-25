@@ -9,28 +9,8 @@ function Checkbox() {
     const [money, setMoney] = useState(false)
     const [counter, setCounter] = useState(6)
 
-    function changeClothing() {
-        setClothing(prevClothing => !prevClothing)
-    }
-
-    function changeFood() {
-        setFood(prevFood => !prevFood)
-    }
-
-    function changeBackpack() {
-        setBackpack(prevBackpack => !prevBackpack)
-    }
-
-    function changeTech() {
-        setTech(prevTech => !prevTech)
-    }
-
-    function changeChargers() {
-        setChargers(prevChargers => !prevChargers)
-    }
-
-    function changeMoney() {
-        setMoney(prevMoney => !prevMoney)
+    const toggleTodoItem = (updateItem) => () => {
+        updateItem(prevItem => !prevItem)
     }
 
     useEffect(() => {
@@ -60,42 +40,42 @@ function Checkbox() {
                                 <input type="checkbox"
                                 name="clothing"
                                 checked={clothing === true}
-                                onChange={changeClothing}  />
+                                onChange={toggleTodoItem(setClothing)}  />
                                 <label>Clothing</label><br />
                             </div>
                             <div>
                                 <input type="checkbox"
                                 name="food"
                                 checked={food === true}
-                                onChange={changeFood} />
+                                onChange={toggleTodoItem(setFood)} />
                                 <label>Food</label><br />
                             </div>
                             <div>
                                 <input type="checkbox"
                                 name="backpack"
                                 checked={backpack === true}
-                                onChange={changeBackpack} />
+                                onChange={toggleTodoItem(setBackpack)} />
                                 <label>Backpack</label><br />
                             </div>
                             <div>
                                 <input type="checkbox"
                                 name="tech"
                                 checked={tech === true}
-                                onChange={changeTech} />
+                                onChange={toggleTodoItem(setTech)} />
                                 <label>Tech Stuff</label><br />
                             </div>
                             <div>
                                 <input type="checkbox"
                                 name="chargers"
                                 checked={chargers === true}
-                                onChange={changeChargers} />
+                                onChange={toggleTodoItem(setChargers)} />
                                 <label>Chargers</label><br />
                             </div>
                             <div>
                                 <input type="checkbox"
                                 name="money"
                                 checked={money === true}
-                                onChange={changeMoney} />
+                                onChange={toggleTodoItem(setMoney)} />
                                 <label>Money + Extra</label><br />
                             </div>
 
