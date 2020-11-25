@@ -34,14 +34,14 @@ function Checkbox() {
     }
 
     useEffect(() => {
-        var Opa = [clothing, food, backpack, tech, chargers, money]
-        var contador = 0
-        for (var i = 0; i < Opa.length; i++) {
-            if (Opa[i] === false) {
-                contador += 1
+        var checkBoolean = [clothing, food, backpack, tech, chargers, money]
+        var countFalse = 0
+        for (var i = 0; i < checkBoolean.length; i++) {
+            if (checkBoolean[i] === false) {
+                countFalse += 1
             }
         }
-        setCounter(contador)
+        setCounter(countFalse)
     }, [clothing, food, backpack, tech, chargers, money])
     
     return(
