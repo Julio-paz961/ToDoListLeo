@@ -9,10 +9,7 @@ import "./text.css"
 import "./colors.css"
 import "./header.css"
 import "./flexgrid.css"
-import "./button.css"
 import "./footer.css"
-
-
 
 function App() {
   return (
