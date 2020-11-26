@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import Button from "./Button"
 
 function Checkbox() {
     const [clothing, setClothing] = useState(false)
@@ -79,7 +80,7 @@ function Checkbox() {
                                 <label>Money + Extra</label><br />
                             </div>
 
-                            <button className="button">Reset!</button>
+                            <Button primary>Reset!</Button>
                         </form>
                     </div>
                 </div>
