@@ -6,7 +6,7 @@ function Footer() {
     return (
         <div className="footer">
             <h3>
-                &copy; Copyright Palabox - 2020
+                &copy; Copyright Palabox - 2021
             </h3>
         </div>
     )
